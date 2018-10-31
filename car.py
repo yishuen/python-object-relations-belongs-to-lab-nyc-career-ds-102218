@@ -1,4 +1,4 @@
-from person import Person
+# from person import Person
 
 class Car:
 
@@ -35,20 +35,20 @@ class Car:
         return people
 
 
-pam = Person("Pam Beasley", "Secretary")
-toyota = Car("Toyota", "Yaris", 2007, pam)
-
-michael = Person("Michael Scott", "Regional Manager")
-sebring = Car("Chrysler", "Sebring Convertible", 2004, michael)
-
-dwight = Person("Dwight Schrute", "Paper Salesperson")
-datsun = Car("Datsun", "280Z", 1978, dwight)
-
-meredith = Person("Meredith Palmer", "Purchaser - Supplier Relations")
-ford_minivan = Car("Ford", "Aerostar Minivan", 1997, meredith)
-
-jim = Person("Jim Halpert", "Paper Salesperson")
-corolla = Car("Toyota", "Corolla", 2000, jim)
+# pam = Person("Pam Beasley", "Secretary")
+# toyota = Car("Toyota", "Yaris", 2007, pam)
+#
+# michael = Person("Michael Scott", "Regional Manager")
+# sebring = Car("Chrysler", "Sebring Convertible", 2004, michael)
+#
+# dwight = Person("Dwight Schrute", "Paper Salesperson")
+# datsun = Car("Datsun", "280Z", 1978, dwight)
+#
+# meredith = Person("Meredith Palmer", "Purchaser - Supplier Relations")
+# ford_minivan = Car("Ford", "Aerostar Minivan", 1997, meredith)
+#
+# jim = Person("Jim Halpert", "Paper Salesperson")
+# corolla = Car("Toyota", "Corolla", 2000, jim)
 
 stanley = Person("Stanley Hudson", "Paper Salesperson")
 camry = Car ("Toyota", "Camry", 2008, stanley)
