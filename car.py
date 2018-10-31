@@ -50,5 +50,5 @@ class Car:
 # jim = Person("Jim Halpert", "Paper Salesperson")
 # corolla = Car("Toyota", "Corolla", 2000, jim)
 
-stanley = Person("Stanley Hudson", "Paper Salesperson")
-camry = Car ("Toyota", "Camry", 2008, stanley)
+# stanley = Person("Stanley Hudson", "Paper Salesperson")
+# camry = Car ("Toyota", "Camry", 2008, stanley)
