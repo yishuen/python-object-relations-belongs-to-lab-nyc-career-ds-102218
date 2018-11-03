@@ -28,7 +28,6 @@ class Car:
         return self._owner
 
     @classmethod
-    from person import Person
     def cars_driven_by(cls, occ):
         chosen_occ = list(filter(lambda p: p._occupation == occ, Person._all))
         chosen_cars = list(filter(lambda car: car.owner in chosen_occ, Car._all))
