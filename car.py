@@ -35,7 +35,7 @@ class Car:
     def cars_driven_by(cls, occ):
         cars = []
         for car in cls.all():
-            if car.owner.occupation == occupation:
+            if car.owner.occupation == occ:
                 cars.append(car)
         return cars
         # chosen_occ = list(filter(lambda p: p._occupation == occ, Person._all))
