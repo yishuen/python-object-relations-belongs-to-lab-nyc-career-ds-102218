@@ -28,11 +28,20 @@ class Car:
         return self._owner
 
     @classmethod
+    def all(cls):
+        return cls._all
+
+    @classmethod
     def cars_driven_by(cls, occ):
-        chosen_occ = list(filter(lambda p: p._occupation == occ, Person._all))
-        chosen_cars = list(filter(lambda car: car.owner in chosen_occ, Car._all))
-        people = list(map(lambda p: p.owner, chosen_cars))
-        return people
+        cars = []
+        for car in cls.all():
+            if car.owner.occupation == occupation:
+                cars.append(car)
+        return cars
+        # chosen_occ = list(filter(lambda p: p._occupation == occ, Person._all))
+        # chosen_cars = list(filter(lambda car: car.owner in chosen_occ, Car._all))
+        # people = list(map(lambda p: p.owner, chosen_cars))
+        # return people
 
 
 # pam = Person("Pam Beasley", "Secretary")

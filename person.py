@@ -29,18 +29,20 @@ class Person:
 
     @classmethod
     def drives_a(cls, make):
-        car_makes = {}
-        for car in Car._all:
-            car_makes[car._owner] = car._make
-        matches = {}
-        for k, v in car_makes.items():
-            if v == make:
-                matches[k] = v
-        return list(map(lambda obj: obj, matches.keys()))
+        owners = [car.owner for car in Car.all() if car.make == make]
+        return owners
+        # car_makes = {}
+        # for car in Car._all:
+        #     car_makes[car._owner] = car._make
+        # matches = {}
+        # for k, v in car_makes.items():
+        #     if v == make:
+        #         matches[k] = v
+        # return list(map(lambda obj: obj, matches.keys()))
 
     def drives_same_make_as_me(self):
         my_make = list(filter(lambda car: car.owner == self, Car._all))[0]._make
-        print(my_make)
+        # print(my_make)
         matches = list(filter(lambda car: car.make == my_make, Car._all))
         matches_xself = list(filter(lambda car: car.owner != self, matches))
         people = list(map(lambda car: car.owner, matches_xself))
