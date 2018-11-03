@@ -25,7 +25,7 @@ class Person:
         for car in cars:
             if car.year < oldest.year:
                 oldest = car
-        return oldest.owner.name
+        return oldest.owner
 
     @classmethod
     def drives_a(cls, make):
@@ -36,12 +36,12 @@ class Person:
         for k, v in car_makes.items():
             if v == make:
                 matches[k] = v
-        return list(map(lambda obj: obj.name, matches.keys()))
+        return list(map(lambda obj: obj, matches.keys()))
 
     def drives_same_make_as_me(self):
         my_make = list(filter(lambda car: car.owner == self, Car._all))[0]._make
         print(my_make)
         matches = list(filter(lambda car: car.make == my_make, Car._all))
         matches_xself = list(filter(lambda car: car.owner != self, matches))
-        people = list(map(lambda car: car.owner.name, matches_xself))
+        people = list(map(lambda car: car.owner, matches_xself))
         return people
